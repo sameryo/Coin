@@ -4,11 +4,12 @@
 #include<unistd.h>
 
 int main() {
-    char name[20];
     int i;
     int heads=0,tails=0;
     
     srand((unsigned int)time(NULL));
+
+    
     printf("Tossing a coin...\n");
     
     for(i=0;i<3;i++){
@@ -23,5 +24,12 @@ int main() {
     }
     
     printf("Heads: %d, Tails: %d\n",heads,tails);
+
+    if(heads>tails){
+        printf("%s won!\n",name);
+    }
+    else {
+         printf("%s lost!\n",name);
+    }
     return 0;
 }
